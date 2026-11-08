@@ -4403,3 +4403,195 @@ button, input, select, textarea {
     text-align: center;
   }
 }
+
+img,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.reference-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.reference-image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--pr-parchment);
+}
+
+.reference-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.reference-caption {
+  padding: 1rem 0.25rem;
+}
+
+.reference-caption h3,
+.reference-caption p {
+  overflow-wrap: anywhere;
+}
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.credit-card {
+  display: grid;
+  grid-template-columns: minmax(0, 120px) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--pr-line);
+  border-radius: 14px;
+  background: var(--pr-surface);
+}
+
+.credit-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.credit-card h2,
+.credit-card p {
+  margin-top: 0;
+  overflow-wrap: anywhere;
+}
+
+.pr-order-grid,
+.pr-booking-layout,
+.pr-dual-cta-section,
+.pr-dual-card,
+.pr-dual-text-col,
+.pr-order-cart-card,
+.pr-order-form-card,
+.pr-booking-form-box,
+.pr-booking-info-box {
+  min-width: 0;
+}
+
+.im-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.pr-reviews-cards-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+
+.pr-reviews-filter-bar {
+  flex-wrap: wrap;
+}
+
+.pr-dual-text-col h3 {
+  min-height: 0;
+}
+
+@media (max-width: 540px) {
+  .im-search-wrap {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .im-dietary-pills {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .pr-booking-form-box,
+  .pr-booking-info-box,
+  .pr-order-cart-card,
+  .pr-order-form-card {
+    padding: 1.25rem;
+  }
+
+  .pr-dual-card {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .pr-dual-photo-col {
+    width: 100%;
+  }
+
+  .pr-dual-text-col {
+    min-height: 0;
+    width: 100%;
+  }
+
+  .pr-dual-text-col h3,
+  .pr-dual-text-col p,
+  .pr-dual-perks {
+    min-height: 0;
+  }
+
+  .pr-reviews-filter-bar {
+    gap: 0.5rem;
+  }
+
+  .pr-reviews-filter-bar > span {
+    flex-basis: 100%;
+  }
+
+  .credit-card {
+    grid-template-columns: minmax(0, 88px) minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .credits-heading h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .pr-header {
+    padding-inline: 0.75rem;
+  }
+
+  .pr-brand {
+    min-width: 0;
+    gap: 0.4rem;
+  }
+
+  .pr-brand-name {
+    font-size: 1rem;
+  }
+
+  .pr-brand-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.1em;
+  }
+
+  .pr-header-actions {
+    gap: 0.35rem;
+  }
+
+  .pr-order-btn {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .pr-order-btn > span:not(.pr-cart-badge) {
+    display: none;
+  }
+}

@@ -94,43 +94,6 @@ button, input, select, textarea {
 /* ============================================================
    TOP BAR & HEADER
    ============================================================ */
-.pr-top-bar {
-  background: var(--pr-forest-dark);
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.78rem;
-  padding: 6px 1.5rem;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-}
-
-.pr-top-bar-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.pr-top-bar-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.pr-top-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--pr-gold);
-  display: inline-block;
-}
-
-.pr-top-phone {
-  color: var(--pr-gold);
-  font-weight: 700;
-}
-
 .pr-header {
   position: sticky;
   top: 0;
@@ -4397,10 +4360,6 @@ button, input, select, textarea {
   }
   .pr-testimonials-carousel {
     flex-direction: column;
-  }
-  .pr-top-bar-inner {
-    justify-content: center;
-    text-align: center;
   }
 }
 

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { ShoppingBag, Menu, X, Shield } from "lucide-react";
 import { useCart } from "@/lib/cart-store";
-import { useRestaurantInfo } from "@/lib/restaurant-info-store";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,28 +16,10 @@ const navLinks = [
 
 export function SiteHeader() {
   const { itemCount } = useCart();
-  const { info } = useRestaurantInfo();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
-      {/* Top Banner Notice */}
-      <div className="pr-top-bar">
-        <div className="pr-top-bar-inner">
-          <div className="pr-top-bar-left">
-            <span className="pr-top-dot" />
-            <span>{info.address} • {info.deliveryRadius}</span>
-          </div>
-          <div className="pr-top-bar-right">
-            <span>Call to Order: </span>
-            <a href={`tel:${info.phone1}`} className="pr-top-phone">
-              📞 {info.phone1}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <header className="pr-header">
+    <header className="pr-header">
         {/* Brand Logo */}
         <Link href="/" className="pr-brand" aria-label="Parichayam Restaurant Home">
           <div className="pr-logo-icon">
@@ -120,7 +101,6 @@ export function SiteHeader() {
             </div>
           </div>
         )}
-      </header>
-    </>
+    </header>
   );
 }
